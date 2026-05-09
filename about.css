@@ -1,0 +1,142 @@
+  :root {
+            --orangered: #FF4500;
+            --navy: #1f3b5c;
+            --dark: #02021a;
+            --white: #ffffff;
+            --transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+        }
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            background: #fafafa; 
+            color: var(--navy); 
+            overflow-x: hidden; 
+        }
+
+        /* --- ABOUT HERO --- */
+        .about-hero {
+            height: 70vh;
+            background: linear-gradient(rgba(0,0,80,0.5), rgba(0,0,80,0.5)), 
+                        url('https://images.unsplash.com/photo-1595428774223-ef52624120d2?q=80&w=2070');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+        }
+
+        .about-hero h1 { 
+            font-family: 'Montserrat'; 
+            font-size: 3.3rem; 
+            text-transform: uppercase; 
+        }
+
+        /* --- THE FOUNDER'S VISION SECTION --- */
+        .founder-section { padding: 100px 10%; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+        .founder-text h2 { font-family: Montserrat; font-size: 2.5rem; margin-bottom: 30px; position: relative; }
+        .founder-text h2::after { content: ''; position: absolute; left: 0; bottom: -10px; width: 60px; height: 4px; background: var(--orangered); }
+        .founder-text p { line-height: 1.9; margin-bottom: 20px; opacity: 0.8; }
+
+        .founder-image { position: relative; }
+        .founder-image img { width: 100%; border-radius: 20px; box-shadow: 0 30px 60px rgba(0,0,0,0.1); }
+        .experience-badge {
+            position: absolute; bottom: -30px; left: -30px;
+            background: var(--orangered); color: #fff; padding: 30px;
+            border-radius: 15px; font-family: Montserrat; text-align: center;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        @keyframes float { 0% { transform: translateY(0); } 50% { transform: translateY(-15px); } 100% { transform: translateY(0); } }
+
+        /* --- JOURNEY TIMELINE --- */
+        .timeline-section { padding: 100px 10%; background: var(--navy); color: #fff; text-align: center; }
+        .timeline-container { margin-top: 60px; position: relative; max-width: 1000px; margin-left: auto; margin-right: auto; }
+        
+        .timeline-item { 
+            background: rgba(255,255,255,0.05); 
+            padding: 40px; border-radius: 15px; margin-bottom: 30px;
+            border-left: 5px solid var(--orangered);
+            text-align: left; transition: var(--transition);
+        }
+        .timeline-item:hover { background: rgba(255,255,255,0.1); transform: translateX(10px); }
+        .timeline-year { font-weight: 900; color: var(--orangered); font-size: 1.5rem; display: block; margin-bottom: 10px; }
+
+   
+        /* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
+
+         .cta { 
+            padding: 120px 10%; 
+            text-align: center; 
+            position: relative;
+            background: linear-gradient(rgba(0,0,50,0.6), rgba(0,0,50,0.6)), 
+                        url('https://images.unsplash.com/photo-1560448204-61dc36dc98c8?q=80&w=2070');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Parallax effect */
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta h2 { 
+            font-family: 'Montserrat'; 
+            font-size: clamp(2rem, 5vw, 3rem); 
+            margin-bottom: 20px; 
+            text-transform: uppercase;
+        }
+
+        .cta p { 
+            font-size: 1.2rem; 
+            margin-bottom: 40px; 
+            opacity: 0.9; 
+            max-width: 700px; 
+            margin-left: auto; 
+            margin-right: auto; 
+        }
+
+        /* Animated Button Logic */
+        .btn-cta { 
+            background: var(--orangered); 
+            color: #fff; 
+            padding: 20px 50px; 
+            text-decoration: none; 
+            font-weight: 800; 
+            border-radius: 5px; 
+            display: inline-block; 
+            transition: all 0.4s ease;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border: 2px solid var(--orangered);
+        }
+
+        .btn-cta:hover { 
+            background: transparent;
+            color: #fff;
+            transform: translateY(-10px) scale(1.05); 
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border-color: #fff;
+        }
+
+        /* Aesthetic "Paint Drip" Decoration for CTA */
+        .cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background: var(--orangered);
+        }
+
+        /* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */

@@ -1,0 +1,256 @@
+   :root {
+            --orangered: #FF4500;
+            --navy: #1f3b5c;
+            --dark: #02021a;
+            --white: #ffffff;
+            --transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+        }
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            background: var(--cream); 
+            color: var(--navy); 
+            overflow-x: hidden; 
+        }
+
+      
+        /* --- RETAINED: PRODUCT HERO --- */
+        .product-hero {
+            height: 70vh;
+            background: linear-gradient(rgba(0,0,80,0.5), rgba(0,0,80,0.5)), 
+                        url('https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=2070');
+            background-size: cover; 
+            background-position: center;
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+            color: #fff; 
+            text-align: center;
+        }
+        .product-hero h1 { 
+            font-family: 'Montserrat'; 
+            font-size: 3.3rem; 
+            text-transform: uppercase; 
+        }
+
+        /* --- SHOWROOM SECTION CONCEPT --- */
+        .showroom-container { padding: 80px 0; }
+
+        .product-row {
+            display: flex;
+            min-height: 80vh;
+            width: 100%;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+        }
+
+        .product-row:nth-child(even) { flex-direction: row-reverse; }
+
+        .product-visual {
+            flex: 1;
+            min-width: 50%;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+            min-height: 500px;
+        }
+
+        .product-details {
+            flex: 1;
+            min-width: 50%;
+            padding: 10% 8%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: var(--cream);
+        }
+
+        .product-category {
+            color: var(--orangered);
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .product-details h2 {
+            font-family: 'Montserrat';
+            font-size: 3rem;
+            margin-bottom: 25px;
+            line-height: 1.1;
+        }
+
+        .product-details p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            opacity: 0.8;
+            margin-bottom: 35px;
+        }
+
+        /* Technical Info - Glassmorphism Card */
+        .tech-box {
+            background: rgba(0, 0, 128, 0.05);
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid rgba(0, 0, 128, 0.1);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .tech-item h4 { font-size: 0.75rem; text-transform: uppercase; opacity: 0.6; margin-bottom: 5px; }
+        .tech-item p { font-weight: 700; margin: 0; font-size: 1rem; color: var(--navy); }
+
+        /* --- IMAGE HOVER EFFECT --- */
+        .product-visual::before {
+            content: 'VIEW FINISH';
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%) scale(0.8);
+            background: rgba(255, 69, 0, 0.9);
+            color: #fff;
+            padding: 15px 30px;
+            font-weight: 700;
+            border-radius: 50px;
+            opacity: 0;
+            transition: var(--transition);
+            z-index: 10;
+        }
+
+        .product-visual:hover::before { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+        .product-visual:hover img { transform: scale(1.1); }
+        .product-visual img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition); }
+
+
+         .cta { 
+            padding: 120px 10%; 
+            text-align: center; 
+            position: relative;
+            background: linear-gradient(rgba(0,0,50,0.6), rgba(0,0,50,0.6)), 
+                        url('https://images.unsplash.com/photo-1560448204-61dc36dc98c8?q=80&w=2070');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Parallax effect */
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta h2 { 
+            font-family: 'Montserrat'; 
+            font-size: clamp(2rem, 5vw, 3rem); 
+            margin-bottom: 20px; 
+            text-transform: uppercase;
+        }
+
+        .cta p { 
+            font-size: 1.2rem; 
+            margin-bottom: 40px; 
+            opacity: 0.9; 
+            max-width: 700px; 
+            margin-left: auto; 
+            margin-right: auto; 
+        }
+
+        /* Animated Button Logic */
+        .btn-cta { 
+            background: var(--orangered); 
+            color: #fff; 
+            padding: 20px 50px; 
+            text-decoration: none; 
+            font-weight: 800; 
+            border-radius: 5px; 
+            display: inline-block; 
+            transition: all 0.4s ease;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border: 2px solid var(--orangered);
+        }
+
+        .btn-cta:hover { 
+            background: transparent;
+            color: #fff;
+            transform: translateY(-10px) scale(1.05); 
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border-color: #fff;
+        }
+
+        /* Aesthetic "Paint Drip" Decoration for CTA */
+        .cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background: var(--orangered);
+        }
+        /* --- CTA --- */
+        /* .footer-cta {
+            background: var(--navy);
+            color: #fff;
+            padding: 100px 10%;
+            text-align: center;
+        } */
+            /* BUTTON INSIDE THE MODAL POP-UP  */
+        .btn-luxury {
+            padding: 20px 50px;
+            background: var(--orangered);
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 0;
+            display: inline-block;
+            transition: var(--transition);
+            border: 1px solid var(--orangered);
+            margin-top: 40px;
+        }
+
+        .btn-luxury:hover {
+            background: var(--navy);
+            border-color: #fff;
+            transform: translateY(-5px);
+        }
+
+        @media (max-width: 992px) {
+            .product-row { flex-direction: column !important; }
+            .product-details { padding: 60px 8%; }
+            .product-details h2 { font-size: 2.2rem; }
+        }
+
+        /* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&777  */
+        /* --- MODAL SYSTEM --- */
+        .product-modal {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 80, 0.95); backdrop-filter: blur(10px);
+            display: none; justify-content: center; align-items: center;
+            z-index: 5000; padding: 20px;
+        }
+        .modal-content {
+            background: var(--white); width: 100%; max-width: 1000px;
+            border-radius: 25px; display: grid; grid-template-columns: 1fr 1fr;
+            overflow: hidden; position: relative; animation: modalIn 0.4s ease-out;
+        }
+        @keyframes modalIn { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
+
+        .close-modal {
+            position: absolute; top: 20px; right: 25px; font-size: 2.5rem;
+            color: var(--navy); cursor: pointer; z-index: 100; font-weight: 300;
+        }
+        .modal-img-container { background: #eee; }
+        .modal-img { width: 100%; height: 100%; object-fit: cover; }
+        .modal-text { padding: 50px; display: flex; flex-direction: column; justify-content: center; }
+        .modal-text h2 { color: var(--orangered); font-family: Montserrat; font-size: 2rem; margin-bottom: 15px; }
+        .modal-text p { line-height: 1.6; color: #555; margin-bottom: 30px; }

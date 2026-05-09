@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Showroom | Colour Trust Paints</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+
+    <link rel="stylesheet" href="./navfolder/nav.css">
+    <link rel="stylesheet" href="./product.css">
+    <link rel="stylesheet" href="./footnavfolder/foot.css">
+
+    <link rel="icon" sizes="32*32" href="./main_logo-removebg-preview.png">
+
+</head>
+<body>
+
+    <!-- ******************************************* -->
+       <!-- Sticky Navigation -->
+            <header class="sticky-nav">
+            <div class="sticky-nav-container">
+                <div class="sticky-nav-logo">
+                <span>Colour Trust Paints</span>
+                </div>
+                <nav class="sticky-nav-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                </nav>
+                <button class="sticky-nav-toggle">
+                <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            </header>
+    <!-- ******************************************* -->
+
+
+    <section class="product-hero">
+        <div data-aos="zoom-out">
+            <h1>Our Products</h1>
+            <p >Architectural Coatings & Finishes</p>
+        </div>
+    </section>
+
+    <div class="showroom-container">
+        
+        <div class="product-row">
+            <div class="product-visual" data-aos="fade-right">
+                <img src="./ctpaints/bluewall.jpg" alt="Satin Finish">
+            </div>
+            <div class="product-details" data-aos="fade-left">
+                <span class="product-category">Water-Based Collection</span>
+                <h2>The Satin <br>Masterpiece</h2>
+                <p>Engineered for the elite home. Our Satin finish reflects just enough light to highlight architectural details while offering a "scrub-tough" surface that defies the Nigerian humidity.</p>
+                <div class="tech-box">
+                    <div class="tech-item"><h4>Sheen Level</h4><p>25-35% (Medium)</p></div>
+                    <div class="tech-item"><h4>Durability</h4><p>High Washability</p></div>
+                    <div class="tech-item"><h4>Best For</h4><p>Living Areas / Kitchens</p></div>
+                    <div class="tech-item"><h4>Coverage</h4><p>12sqm per Litre</p></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-row">
+            <div class="product-visual" data-aos="fade-left">
+                <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?q=80&w=2070" alt="Matt Finish">
+            </div>
+            <div class="product-details" data-aos="fade-right">
+                <span class="product-category">Water-Based Collection</span>
+                <h2>Velvet <br>Matt Emulsion</h2>
+                <p>The ultimate camouflage for wall imperfections. This non-reflective coating provides a deep, rich color depth that creates a calming, modern environment.</p>
+                <div class="tech-box">
+                    <div class="tech-item"><h4>Sheen Level</h4><p>0-5% (Flat)</p></div>
+                    <div class="tech-item"><h4>Pigment</h4><p>High-Titanium Load</p></div>
+                    <div class="tech-item"><h4>Best For</h4><p>Ceilings / Bedrooms</p></div>
+                    <div class="tech-item"><h4>Coverage</h4><p>14sqm per Litre</p></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-row">
+            <div class="product-visual" data-aos="fade-right">
+                <img src="https://images.unsplash.com/photo-1525909002-1b05e0c869d8?q=80&w=2070" alt="Gloss Finish">
+            </div>
+            <div class="product-details" data-aos="fade-left">
+                <span class="product-category">Oil-Based Collection</span>
+                <h2>Mirror <br>Enamel Gloss</h2>
+                <p>A shield of glass for your wood and metal surfaces. Our oil-based gloss is formulated with premium resins to ensure it doesn't yellow over time under the tropical sun.</p>
+                <div class="tech-box">
+                    <div class="tech-item"><h4>Sheen Level</h4><p>90%+ (Mirror)</p></div>
+                    <div class="tech-item"><h4>Resin Type</h4><p>Alkyd Modified</p></div>
+                    <div class="tech-item"><h4>Best For</h4><p>Doors / Gates / Trims</p></div>
+                    <div class="tech-item"><h4>Coverage</h4><p>15sqm per Litre</p></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+<!-- &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
+        <!-- MODAL POP-UP BOX  -->
+     <div class="product-modal" id="productModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-img-container">
+                <img src="" id="modalImg" class="modal-img">
+            </div>
+            <div class="modal-text">
+                <h2 id="modalTitle">Product</h2>
+                <p id="modalDesc">Detailed description goes here.</p>
+                <div class="tech-box">
+                    <div class="tech-item"><h4>Application</h4><p>Roller/Brush</p></div>
+                    <div class="tech-item"><h4>Clean up</h4><p>Water/Thinner</p></div>
+                </div>
+                <a href="#contact" class="btn-luxury" style="margin-top: 30px; text-align: center;">Get Quote</a>
+            </div>
+        </div>
+     </div>
+  <!-- ************************************************************************* -->
+            
+    <section class="cta" data-aos="zoom-in" data-aos-mirror="true">
+        <div class="cta-content">
+            <h2>Ready for a Transformation?</h2>
+            <p>
+                From custom chemical production to professional site finishing, 
+                we bring your vision to life with colors that inspire and trust that endures.
+            </p>
+            <!-- ***************** -->
+            <a href="#contact" class="btn-cta">
+                Start Your Project Today
+            </a>
+        </div>
+    </section>
+
+    <!-- ******************************************** -->
+          <div id="footer"></div>
+    <!-- ************************************************************************* -->
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1200, once: false, mirror: true });
+
+         // MODAL LOGIC
+        const modal = document.getElementById('productModal');
+        const closeModal = document.querySelector('.close-modal');
+
+        document.querySelectorAll('.product-visual').forEach(visual => {
+            visual.onclick = function() {
+                // Find data from the sibling "product-details"
+                const details = this.parentElement.querySelector('.product-details');
+                const title = details.querySelector('h2').innerText;
+                const desc = details.querySelector('p').innerText;
+                const imgSrc = this.querySelector('img').src;
+
+                // Update Modal
+                document.getElementById('modalTitle').innerText = title;
+                document.getElementById('modalDesc').innerText = "Technical Application: " + desc;
+                document.getElementById('modalImg').src = imgSrc;
+
+                // Show Modal
+                modal.style.display = 'flex';
+                document.body.style.overflow = 'hidden'; // Stop scrolling
+            };
+        });
+
+        // Close functions
+        closeModal.onclick = () => {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        };
+
+        window.onclick = (event) => {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        };
+    </script>
+    <script src="./navfolder/nav.js"></script>
+    <script src="./footnavfolder/foot.js"></script>
+</body>
+</html>

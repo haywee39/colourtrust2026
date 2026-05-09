@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Colour Trust Paints</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="./navfolder/nav.css">
+
+    <link rel="icon" sizes="32*32" href="./main_logo-removebg-preview.png">
+    <style>
+        :root {
+            --orangered: #FF4500;
+            --navy: #1f3b5c;
+            --dark: #02021a;
+            --white: #ffffff;
+            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; background: #fdfbf7; color: var(--navy); overflow-x: hidden; }
+
+
+      
+
+          /* --- ABOUT HERO --- */
+        .contact-hero {
+            height: 70vh;
+            background: linear-gradient(rgba(0,0,80,0.7), rgba(0,0,80,0.7)), 
+                        url('https://images.unsplash.com/photo-1595428774223-ef52624120d2?q=80&w=2070');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+        }
+
+        .contact-hero h1 { font-family: 'Montserrat'; font-size: 3.3rem; text-transform: uppercase; }
+
+        /* --- MAIN CONTACT SECTION --- */
+        .contact-wrapper {
+            max-width: 1200px; margin: -80px auto 100px;
+            display: grid; grid-template-columns: 1fr 1.5fr;
+            background: #fff; border-radius: 20px; overflow: hidden;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.1);
+        }
+
+        /* Left Side: Info */
+        .contact-info {
+            background: var(--navy); color: #fff; padding: 60px;
+            display: flex; flex-direction: column; justify-content: space-between;
+        }
+        .info-item { display: flex; align-items: flex-start; margin-bottom: 40px; }
+        .info-item i { font-size: 1.5rem; color: var(--orangered); margin-right: 20px; margin-top: 5px; }
+        .info-item h3 { font-family: Montserrat; font-size: 1.1rem; margin-bottom: 5px; }
+        .info-item p { opacity: 0.7; font-size: 0.9rem; }
+
+        .social-circle { display: flex; gap: 15px; margin-top: 30px; }
+        .social-circle a { 
+            width: 45px; height: 45px; background: rgba(255,255,255,0.1); 
+            display: flex; align-items: center; justify-content: center; 
+            border-radius: 50%; color: #fff; text-decoration: none; transition: var(--transition);
+        }
+        .social-circle a:hover { background: var(--orangered); transform: translateY(-5px); }
+
+        /* Right Side: Form */
+        .contact-form-box { padding: 60px; }
+        .contact-form-box h2 { font-family: Montserrat; font-size: 2rem; margin-bottom: 10px; }
+        .contact-form-box p { margin-bottom: 40px; opacity: 0.6; }
+
+        .input-group { position: relative; margin-bottom: 30px; }
+        .input-group input, .input-group textarea, .input-group select {
+            width: 100%; padding: 15px 0; border: none; border-bottom: 2px solid #ddd;
+            outline: none; font-family: inherit; font-size: 1rem; transition: var(--transition);
+            background: transparent;
+        }
+        .input-group label { position: absolute; top: 15px; left: 0; pointer-events: none; transition: var(--transition); opacity: 0.5; }
+        
+        /* Animation for Input Focus */
+        .input-group input:focus ~ label, .input-group input:valid ~ label,
+        .input-group textarea:focus ~ label, .input-group textarea:valid ~ label {
+            top: -10px; font-size: 0.8rem; color: var(--orangered); opacity: 1;
+        }
+        .input-group input:focus, .input-group textarea:focus { border-bottom-color: var(--orangered); }
+
+        .btn-send {
+            width: 100%; padding: 20px; background: var(--orangered); color: #fff;
+            border: none; border-radius: 5px; font-weight: 700; cursor: pointer;
+            text-transform: uppercase; letter-spacing: 2px; transition: var(--transition);
+        }
+        .btn-send:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(255, 69, 0, 0.3); }
+
+        /* --- MAP SECTION --- */
+        .map-section { height: 450px; width: 100%; filter: grayscale(100%) invert(90%); }
+
+        @media (max-width: 992px) {
+            .contact-wrapper { grid-template-columns: 1fr; margin-top: 20px; }
+            .contact-info { padding: 40px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ******************************************* -->
+           <!-- Sticky Navigation -->
+            <header class="sticky-nav">
+            <div class="sticky-nav-container">
+                <div class="sticky-nav-logo">
+                <span>Colour Trust Paints</span>
+                </div>
+                <nav class="sticky-nav-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                </nav>
+                <button class="sticky-nav-toggle">
+                <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            </header>
+    <!-- ******************************************* -->
+
+
+    <section class="contact-hero">
+        <div data-aos="zoom-out">
+            <h1>Get In Touch</h1>
+            <p>Ready to start your production or finishing project?</p>
+        </div>
+    </section>
+
+    <div class="contact-wrapper" data-aos="fade-up">
+        <div class="contact-info">
+            <div>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h3>Headquarters</h3>
+                        <p>Alagbado / Ijoko, <br>Lagos-Ogun State, Nigeria.</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <div>
+                        <h3>Call Ayo Directly</h3>
+                        <p>+234 800-COLOUR-TRUST</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h3>Official Email</h3>
+                        <p>info@colourtrust.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h3>Follow Us</h3>
+                <div class="social-circle">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-form-box">
+            <h2>Project Inquiry</h2>
+            <p>Fill out the form below and our team will get back to you within 24 hours.</p>
+            
+            <form action="#">
+                <div class="input-group">
+                    <input type="text" required>
+                    <label>Your Full Name</label>
+                </div>
+                <div class="input-group">
+                    <input type="email" required>
+                    <label>Email Address</label>
+                </div>
+                <div class="input-group">
+                    <select style="border-bottom: 2px solid #ddd; width: 100%; padding: 15px 0; outline: none; background: transparent;">
+                        <option value="" disabled selected>Select Service Interest</option>
+                        <option value="production">Paint Production (Purchase)</option>
+                        <option value="finishing">Professional Site Finishing</option>
+                        <option value="consultancy">Site Assessment / Quote</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <textarea rows="4" required></textarea>
+                    <label>Project Details (Location, size, etc.)</label>
+                </div>
+                <button type="submit" class="btn-send">Send Inquiry</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="map-section">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126829.40428616196!2d3.203362097265625!3d6.6455171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b96df6774f767%3A0x63346d0e909a9096!2sAlagbado!5e0!3m2!1sen!2sng!4v1700000000000!5m2!1sen!2sng" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <footer style="background:var(--dark); color:#fff; padding:40px 10%; text-align:center;">
+        <p>&copy; 2026 Colour Trust Paints | Developed by Ayo (Softcity Group)</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, mirror: true });
+    </script>
+    <script src="./navfolder/nav.js"></script>
+</body>
+</html>

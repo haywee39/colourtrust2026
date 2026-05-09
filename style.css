@@ -1,0 +1,353 @@
+
+        :root {
+            --orangered: #FF4500;
+            --navy: #1f3b5c;
+            --dark: #02021a;
+            --white: #ffffff;
+            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            /* RGBA Versions for Glow Opacity */
+            --navy-glow: rgba(0, 0, 128, 0.4);
+            --orangered-glow: rgba(255, 69, 0, 0.6);
+
+
+        }
+
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: 
+            border-box; 
+        }
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            background: #fff; 
+            color: var(--navy); 
+            overflow-x: hidden; 
+        }
+
+      
+        /* --- BUTTONS -this style is somehow tied to the content of the herosection-- */
+        .btn {
+            padding: 15px 30px; border-radius: 30px; text-decoration: none; 
+            font-weight: 700; display: inline-block; transition: var(--transition);
+            border: none; cursor: pointer; text-transform: uppercase; letter-spacing: 1px;
+        }
+        .btn:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+        .btn-orange { background: var(--orangered); color: #fff; }
+
+        /* --- HERO --- */
+        .hero { 
+            height: 85vh; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            color: #fff; 
+            text-align: center;
+            background: linear-gradient(rgba(0,0,50,0.5), rgba(0,0,50,0.5)), url('./ctpaints/midcush.jpg');
+            background-size: cover; 
+            background-position: center; 
+             
+        }
+        .hero h1 { 
+            font-family: 'Montserrat'; 
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            margin-bottom: 20px; 
+        }
+
+        .hero-content p{
+            font-size: 20px;
+        }
+
+
+        /* --- BRAND STORY SECTION --- */
+        .brand-story { 
+            padding: 100px 8%; 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 50px; 
+            align-items: center; 
+        }
+        .story-text h2 { 
+            font-family: Montserrat; 
+            font-size: 2.5rem; 
+            margin-bottom: 20px; 
+            color: var(--navy); 
+        }
+
+        .story-text p { 
+            margin-bottom: 25px; 
+            line-height: 1.8; 
+            opacity: 0.8; 
+        }   
+     /* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
+
+            @keyframes glowingShadowOrbit {
+                0% {
+                    box-shadow: 8px 8px 5px var(--navy-glow);
+                }
+                15% {
+                    box-shadow: 0px 12px 25px var(--orangered-glow);
+                }
+                25% {
+                    box-shadow: -8px 8px 5px var(--navy-glow);
+                }
+                40% {
+                    box-shadow: -12px 0px 25px var(--orangered-glow);
+                }
+                50% {
+                    box-shadow: -8px -8px 5px var(--navy-glow);
+                }
+                65% {
+                    box-shadow: 0px -12px 25px var(--orangered-glow);
+                }
+                75% {
+                    box-shadow: 8px -8px 5px var(--navy-glow);
+                }
+                90% {
+                    box-shadow: 12px 0px 25px var(--orangered-glow);
+                }
+                100% {
+                    box-shadow: 8px 8px 5px var(--navy-glow);
+                }
+            }
+
+            .logo-glowing-orbital {
+                width: 80%;
+                height: 100%;
+                border-radius: 10px;
+                
+                /* 10 seconds for a full 'lap' makes it look more ambient and premium */
+                animation: glowingShadowOrbit 10s ease-in-out infinite;
+                transition: all 0.3s ease;
+            }
+
+            /* Maintain the hover lift for interactivity */
+            .logo-glowing-orbital:hover {
+                transform: scale(1.03);
+            }
+        
+    /* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
+                /* expertise Section  */
+        /* --- SERVICES (With BG Image) --- */
+        .services { 
+            /* padding: 100px 8%;  */
+            padding: 80px 8%;
+            background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), 
+                        url('https://images.unsplash.com/photo-1525909002-1b05e0c869d8?q=80&w=2070');
+                        
+            background-attachment: fixed; 
+            background-size: cover;
+        }
+
+        .services h2{
+            text-align:center; 
+            font-family:Montserrat; 
+            font-size:2.5rem; 
+            margin-bottom: 50px;
+        }
+
+        .service-grid{
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 25px;
+        }
+       
+        .service-card {
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            overflow: hidden;
+            z-index: 1;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            transition: transform 0.3s ease;
+        }
+
+        /* The Dark Overlay */
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,128,0.2), rgba(0,0,0,0.9));
+            z-index: -1;
+            transition: 0.3s;
+        }
+
+        .service-card:hover::before {
+            background: linear-gradient(to bottom, rgba(255, 69, 0, 0.4), rgba(0,0,0,0.95));
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-card i { 
+            font-size:2rem; 
+            color:var(--orangered); 
+            margin-bottom:15px; 
+        }
+        .service-card p { 
+            font-size: 0.9rem; 
+            line-height: 1.5; 
+            opacity: 0.9; 
+        }
+/* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
+        /* --- STATS --- */
+        .stats-bar { 
+            background: var(--navy); 
+            color: #fff; 
+            padding: 80px 10%; 
+            display: flex; 
+            justify-content: space-around; 
+            flex-wrap: wrap; 
+            text-align: center; 
+        }
+        .counter { 
+            font-size: 3.5rem; 
+            color: var(--orangered); 
+            font-family: Montserrat; 
+            display: block; 
+        }
+/* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
+
+         .cta { 
+            padding: 120px 10%; 
+            text-align: center; 
+            position: relative;
+            background: linear-gradient(rgba(0,0,50,0.6), rgba(0,0,50,0.6)), 
+                        url('https://images.unsplash.com/photo-1560448204-61dc36dc98c8?q=80&w=2070');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Parallax effect */
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta h2 { 
+            font-family: 'Montserrat'; 
+            font-size: clamp(2rem, 5vw, 3rem); 
+            margin-bottom: 20px; 
+            text-transform: uppercase;
+        }
+
+        .cta p { 
+            font-size: 1.2rem; 
+            margin-bottom: 40px; 
+            opacity: 0.9; 
+            max-width: 700px; 
+            margin-left: auto; 
+            margin-right: auto; 
+        }
+
+        /* Animated Button Logic */
+        .btn-cta { 
+            background: var(--orangered); 
+            color: #fff; 
+            padding: 20px 50px; 
+            text-decoration: none; 
+            font-weight: 800; 
+            border-radius: 5px; 
+            display: inline-block; 
+            transition: all 0.4s ease;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border: 2px solid var(--orangered);
+        }
+
+        .btn-cta:hover { 
+            background: transparent;
+            color: #fff;
+            transform: translateY(-10px) scale(1.05); 
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border-color: #fff;
+        }
+
+        /* Aesthetic "Paint Drip" Decoration for CTA */
+        .cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background: var(--orangered);
+        }
+
+        /* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
+            #product-quality{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: auto;
+            overflow-x: hidden;
+            background: var(--navy);
+            padding: 2rem;
+            }
+            .listPic{
+            padding: 20px;
+            width: 40%;
+            height: auto;
+            }
+            .listPic img{
+            width: 80%;
+            border-radius: 15px;
+            }
+            .list{
+            margin: 30px;
+            padding: 30px;
+            width: 50%;
+            height: 100%;
+
+            }
+            .list h1{
+            color: white;
+            font-weight: 600;
+            }
+            .list p{
+            color: white;
+            font-size: 16px;
+            line-height: 2rem;
+            font-weight: lighter;
+            }
+            .list .fa-solid{
+            color: var(--orangered);
+            }
+
+            @media (max-width: 768px ){
+                 /* ********************************* */
+                #product-quality{
+                flex-direction: column;
+                padding: 3rem;
+                }
+                .listPic{
+                padding: 15px;
+                width: 90%;
+                }
+                .listPic img{
+                width: 100%;
+                height: 100%;
+                }
+                .list{
+                margin: 0;
+                margin-top: 15px;
+                padding: 10px;
+                width: 100%;
+                }
+                .list p{
+                margin-top: 15px;
+                }
+                /* ************************ */
+            }
+
+
