@@ -140,3 +140,23 @@
         }
 
         /* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
+
+
+          @media (max-width: 768px ){
+            .about-hero {
+                height: 50vh;
+                padding: 1rem;
+            }
+
+            .about-hero h1 { 
+              font-size: 2.8rem; 
+              margin-bottom: 10px;
+            }
+
+            .founder-section { 
+                grid-template-columns: 1fr; 
+                gap: 80px; 
+            }
+        
+
+          }
