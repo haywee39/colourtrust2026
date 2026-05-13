@@ -11,264 +11,35 @@
     
     <link rel="stylesheet" href="./navfolder/nav.css">
     <link rel="stylesheet" href="./footnavfolder/foot.css">
+    <link rel="stylesheet" href="./gallery.css">
 
-        <link rel="icon" sizes="32*32" href="./main_logo-removebg-preview.png">
-    <style>
-        :root {
-            --orangered: #FF4500;
-            --navy: #1f3b5c;
-            --dark: #02021a;
-            --white: #ffffff;
-            --transition: all 0.4s ease;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Poppins', sans-serif; background: #f4f4f4; color: var(--navy); }
-
-      
-        /* --- GALLERY HERO --- */
-        .gallery-hero {
-            height: 70vh;
-            background: linear-gradient(rgba(0,0,80,0.7), rgba(0,0,80,0.7)), 
-                        url('https://images.unsplash.com/photo-1595428774223-ef52624120d2?q=80&w=2070');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            text-align: center;
-        }
-
-        .gallery-hero h1 { font-family: 'Montserrat'; font-size: 3.3rem; text-transform: uppercase; }
-
-        /* --- BEFORE/AFTER SLIDER SECTION --- */
-        .comparison-section { padding: 80px 10%; background: #fff; text-align: center; }
-        .comparison-container {
-            position: relative; width: 100%; max-width: 800px; height: 500px;
-            margin: 50px auto; overflow: hidden; border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-        }
-        .comparison-img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; }
-        /* .before-img { background-image: url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=2070'); } Raw wall */
-        
-        .before-img { background-image: url('./before-after-img/before-paint.jpg'); } /* Raw wall */
-        /* .after-img { 
-            background-image: url('https://images.unsplash.com/photo-1595428774223-ef52624120d2?q=80&w=2070'); /* Finished wall 
-            width: 50%; border-right: 4px solid var(--orangered);
-        } */
-
-        .after-img { 
-            background-image: url('./before-after-img/after-paint.jpg'); /* Finished wall */
-            width: 50%; border-right: 4px solid var(--orangered);
-        }
-        .slider-handle {
-            position: absolute; top: 0; bottom: 0; left: 50%; width: 4px;
-            background: var(--orangered); cursor: ew-resize; transform: translateX(-50%);
-        }
-        .slider-handle::before {
-            content: '\21D4'; position: absolute; top: 50%; left: 50%;
-            transform: translate(-50%, -50%); background: var(--orangered);
-            color: #fff; padding: 10px; border-radius: 50%; font-weight: bold;
-        }
-
-        /* --- MASONRY GALLERY --- */
-        .gallery-grid {
-            padding: 80px 8%;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            grid-auto-rows: 250px;
-            gap: 20px;
-        }
-        .gallery-item { position: relative; overflow: hidden; border-radius: 15px; cursor: pointer; }
-        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition); }
-        .gallery-item:hover img { transform: scale(1.1); }
-        
-        /* Grid Spanning for Masonry Look */
-        .gallery-item.tall { grid-row: span 2; }
-        .gallery-item.wide { grid-column: span 2; }
-
-        .overlay {
-            position: absolute; bottom: -100%; left: 0; width: 100%; height: 100%;
-            background: linear-gradient(transparent, rgba(0,0,128,0.9));
-            display: flex; flex-direction: column; justify-content: flex-end;
-            padding: 30px; transition: var(--transition); color: #fff;
-        }
-        .gallery-item:hover .overlay { bottom: 0; }
-
-
-         /* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
-            #product-quality{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100vw;
-            height: auto;
-            overflow-x: hidden;
-            background: var(--navy);
-            padding: 2rem;
-            }
-            .listPic{
-            padding: 20px;
-            width: 40%;
-            height: auto;
-            }
-            .listPic img{
-            width: 80%;
-            border-radius: 15px;
-            }
-            .list{
-            margin: 30px;
-            padding: 30px;
-            width: 50%;
-            height: 100%;
-
-            }
-            .list h1{
-            color: white;
-            font-weight: 600;
-            }
-            .list p{
-            color: white;
-            font-size: 16px;
-            line-height: 2rem;
-            font-weight: lighter;
-            }
-            .list .fa-solid{
-            color: var(--orangered);
-            }
-        /* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
-         .cta { 
-            padding: 120px 10%; 
-            text-align: center; 
-            position: relative;
-            background: linear-gradient(rgba(0,0,50,0.6), rgba(0,0,50,0.6)), 
-                        url('https://images.unsplash.com/photo-1560448204-61dc36dc98c8?q=80&w=2070');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed; /* Parallax effect */
-            color: #fff;
-            overflow: hidden;
-        }
-
-        .cta-content {
-            position: relative;
-            z-index: 2;
-        }
-
-        .cta h2 { 
-            font-family: 'Montserrat'; 
-            font-size: clamp(2rem, 5vw, 3rem); 
-            margin-bottom: 20px; 
-            text-transform: uppercase;
-        }
-
-        .cta p { 
-            font-size: 1.2rem; 
-            margin-bottom: 40px; 
-            opacity: 0.9; 
-            max-width: 700px; 
-            margin-left: auto; 
-            margin-right: auto; 
-        }
-
-        /* Animated Button Logic */
-        .btn-cta { 
-            background: var(--orangered); 
-            color: #fff; 
-            padding: 20px 50px; 
-            text-decoration: none; 
-            font-weight: 800; 
-            border-radius: 5px; 
-            display: inline-block; 
-            transition: all 0.4s ease;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            border: 2px solid var(--orangered);
-        }
-
-        .btn-cta:hover { 
-            background: transparent;
-            color: #fff;
-            transform: translateY(-10px) scale(1.05); 
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-            border-color: #fff;
-        }
-
-        /* Aesthetic "Paint Drip" Decoration for CTA */
-        .cta::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 10px;
-            background: var(--orangered);
-        }
-
-        @media (max-width: 768px) {
-            .gallery-grid { grid-template-columns: 1fr; grid-auto-rows: 300px; }
-            .gallery-item.wide { grid-column: span 1; }
-            .comparison-container { height: 350px; }
-        }
-
-                 @media (max-width: 768px ){
-            .gallery-hero {
-                height: 50vh;
-                padding: 1rem;
-            }
-
-            .gallery-hero h1 { 
-              font-size: 2.8rem; 
-              margin-bottom: 10px;
-            }
-                            #product-quality{
-                flex-direction: column;
-                padding: 3rem;
-                }
-                .listPic{
-                padding: 15px;
-                width: 90%;
-                }
-                .listPic img{
-                width: 100%;
-                height: 100%;
-                }
-                .list{
-                margin: 0;
-                margin-top: 15px;
-                padding: 10px;
-                width: 100%;
-                }
-                .list p{
-                margin-top: 15px;
-                }
-          }
-    </style>
+    <link rel="icon" sizes="32*32" href="./main_logo-removebg-preview.png">
 </head>
 <body>
 
     <!-- ******************************************* -->
-               <!-- Sticky Navigation -->
-                <header class="sticky-nav">
-                <div class="sticky-nav-container">
-                    <div class="sticky-nav-logo">
-                    <span>Colour Trust Paints</span>
-                    </div>
-                    <nav class="sticky-nav-menu">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                    </nav>
-                    <button class="sticky-nav-toggle">
+        <header class="sticky-nav">
+            <div class="sticky-nav-container">
+                <a href="index.html" class="sticky-nav-logo">
+                    <img src="./main_logo-removebg-preview.png" alt="Colour Trust Logo">
+                    <span class="brand-name">COLOUR TRUST</span>
+                </a>
+
+                <nav class="sticky-nav-menu">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                </nav>
+
+                <button class="sticky-nav-toggle" aria-label="Toggle Menu">
                     <i class="fas fa-bars"></i>
-                    </button>
-                </div>
-                </header>
+                </button>
+            </div>
+        </header>
     <!-- ******************************************* -->
 
 
@@ -291,7 +62,6 @@
 
     <section class="gallery-grid">
         <div class="gallery-item tall" data-aos="fade-up">
-            <!-- <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=2070"> -->
              <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=2070" alt="">
             <div class="overlay">
                 <h3>Lekki Phase 1</h3>

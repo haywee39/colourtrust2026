@@ -29,6 +29,7 @@
 
           /* --- ABOUT HERO --- */
         .contact-hero {
+            margin-top: 120px;
             height: 70vh;
             background: linear-gradient(rgba(0,0,80,0.7), rgba(0,0,80,0.7)), 
                         url('https://images.unsplash.com/photo-1595428774223-ef52624120d2?q=80&w=2070');
@@ -120,26 +121,28 @@
 <body>
 
     <!-- ******************************************* -->
-           <!-- Sticky Navigation -->
-            <header class="sticky-nav">
+        <header class="sticky-nav">
             <div class="sticky-nav-container">
-                <div class="sticky-nav-logo">
-                <span>Colour Trust Paints</span>
-                </div>
+                <a href="index.html" class="sticky-nav-logo">
+                    <img src="./main_logo-removebg-preview.png" alt="Colour Trust Logo">
+                    <span class="brand-name">COLOUR TRUST</span>
+                </a>
+
                 <nav class="sticky-nav-menu">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="products.html">Products</a></li>
                     <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
                 </nav>
-                <button class="sticky-nav-toggle">
-                <i class="fas fa-bars"></i>
+
+                <button class="sticky-nav-toggle" aria-label="Toggle Menu">
+                    <i class="fas fa-bars"></i>
                 </button>
             </div>
-            </header>
+        </header>
     <!-- ******************************************* -->
 
 
