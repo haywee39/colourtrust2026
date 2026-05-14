@@ -12,13 +12,17 @@
 
         }
 
+        *, *::before, *::after{
+            box-sizing: border-box;
+        }
+
         * { 
             margin: 0; 
             padding: 0; 
             box-sizing: 
             border-box; 
         }
-        body { 
+        html,body { 
             font-family: 'Poppins', sans-serif; 
             background: #fff; 
             color: var(--navy); 
@@ -325,6 +329,10 @@
             }
 
             @media (max-width: 768px ){
+
+                .hero h1 { 
+                    font-size: clamp(2.2rem, 1vw, 2rem);
+                }
                  /* ********************************* */
                 #product-quality{
                 flex-direction: column;

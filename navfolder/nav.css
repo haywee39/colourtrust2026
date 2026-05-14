@@ -148,7 +148,16 @@
   }
 } */
 
+*, *::before, *::after{
+  box-sizing: border-box;
+}
 
+html, body{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
 :root {
   --nav-height: 120px;
   --nav-bg: #1f3b5c;
@@ -165,7 +174,8 @@
   left: 0;
   width: 100%;
   height: var(--nav-height);
-  background-color: var(--nav-bg);
+  /* background-color: var(--nav-bg); */
+  background: red;
   transition: var(--nav-transition);
   z-index: 99999;
   display: flex;

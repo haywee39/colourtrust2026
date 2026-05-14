@@ -6,6 +6,10 @@
             --white: #ffffff;
             --transition: all 0.4s ease;
         }
+            
+            *, *::before, *::after{
+            box-sizing: border-box;
+            }
 
         * { 
             margin: 0; 
