@@ -174,8 +174,8 @@ html, body{
   left: 0;
   width: 100%;
   height: var(--nav-height);
-  /* background-color: var(--nav-bg); */
-  background: red;
+  background-color: var(--nav-bg);
+  /* background: red; */
   transition: var(--nav-transition);
   z-index: 99999;
   display: flex;
