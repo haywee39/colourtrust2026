@@ -10,113 +10,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="./navfolder/nav.css">
+    <link rel="stylesheet" href="./footnavfolder/foot.css">
+    <link rel="stylesheet" href="./contact.css">
 
     <link rel="icon" sizes="32*32" href="./main_logo-removebg-preview.png">
-    <style>
-        :root {
-            --orangered: #FF4500;
-            --navy: #1f3b5c;
-            --dark: #02021a;
-            --white: #ffffff;
-            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Poppins', sans-serif; background: #fdfbf7; color: var(--navy); overflow-x: hidden; }
-
-
-      
-
-          /* --- ABOUT HERO --- */
-        .contact-hero {
-            margin-top: 120px;
-            height: 70vh;
-            background: linear-gradient(rgba(0,0,80,0.7), rgba(0,0,80,0.7)), 
-                        url('https://images.unsplash.com/photo-1595428774223-ef52624120d2?q=80&w=2070');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            text-align: center;
-        }
-
-        .contact-hero h1 { font-family: 'Montserrat'; font-size: 3.3rem; text-transform: uppercase; }
-
-        /* --- MAIN CONTACT SECTION --- */
-        .contact-wrapper {
-            max-width: 1200px; margin: -80px auto 100px;
-            display: grid; grid-template-columns: 1fr 1.5fr;
-            background: #fff; border-radius: 20px; overflow: hidden;
-            box-shadow: 0 30px 60px rgba(0,0,0,0.1);
-        }
-
-        /* Left Side: Info */
-        .contact-info {
-            background: var(--navy); color: #fff; padding: 60px;
-            display: flex; flex-direction: column; justify-content: space-between;
-        }
-        .info-item { display: flex; align-items: flex-start; margin-bottom: 40px; }
-        .info-item i { font-size: 1.5rem; color: var(--orangered); margin-right: 20px; margin-top: 5px; }
-        .info-item h3 { font-family: Montserrat; font-size: 1.1rem; margin-bottom: 5px; }
-        .info-item p { opacity: 0.7; font-size: 0.9rem; }
-
-        .social-circle { display: flex; gap: 15px; margin-top: 30px; }
-        .social-circle a { 
-            width: 45px; height: 45px; background: rgba(255,255,255,0.1); 
-            display: flex; align-items: center; justify-content: center; 
-            border-radius: 50%; color: #fff; text-decoration: none; transition: var(--transition);
-        }
-        .social-circle a:hover { background: var(--orangered); transform: translateY(-5px); }
-
-        /* Right Side: Form */
-        .contact-form-box { padding: 60px; }
-        .contact-form-box h2 { font-family: Montserrat; font-size: 2rem; margin-bottom: 10px; }
-        .contact-form-box p { margin-bottom: 40px; opacity: 0.6; }
-
-        .input-group { position: relative; margin-bottom: 30px; }
-        .input-group input, .input-group textarea, .input-group select {
-            width: 100%; padding: 15px 0; border: none; border-bottom: 2px solid #ddd;
-            outline: none; font-family: inherit; font-size: 1rem; transition: var(--transition);
-            background: transparent;
-        }
-        .input-group label { position: absolute; top: 15px; left: 0; pointer-events: none; transition: var(--transition); opacity: 0.5; }
-        
-        /* Animation for Input Focus */
-        .input-group input:focus ~ label, .input-group input:valid ~ label,
-        .input-group textarea:focus ~ label, .input-group textarea:valid ~ label {
-            top: -10px; font-size: 0.8rem; color: var(--orangered); opacity: 1;
-        }
-        .input-group input:focus, .input-group textarea:focus { border-bottom-color: var(--orangered); }
-
-        .btn-send {
-            width: 100%; padding: 20px; background: var(--orangered); color: #fff;
-            border: none; border-radius: 5px; font-weight: 700; cursor: pointer;
-            text-transform: uppercase; letter-spacing: 2px; transition: var(--transition);
-        }
-        .btn-send:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(255, 69, 0, 0.3); }
-
-        /* --- MAP SECTION --- */
-        .map-section { height: 450px; width: 100%; filter: grayscale(100%) invert(90%); }
-
-        @media (max-width: 992px) {
-            .contact-wrapper { grid-template-columns: 1fr; margin-top: 20px; }
-            .contact-info { padding: 40px; }
-        }
-
-                 @media (max-width: 768px ){
-            .contact-hero {
-                height: 50vh;
-                padding: 1rem;
-            }
-
-            .contact-hero h1 { 
-              font-size: 2.8rem; 
-              margin-bottom: 10px;
-            }
-          }
-    </style>
+   
 </head>
 <body>
 
@@ -159,22 +57,31 @@
                 <div class="info-item">
                     <i class="fas fa-map-marker-alt"></i>
                     <div>
-                        <h3>Headquarters</h3>
-                        <p>Alagbado / Ijoko, <br>Lagos-Ogun State, Nigeria.</p>
+                        <h3>Office</h3>
+                        <p>32, Peter Road Alagbado Station, <br>Ijaiye-Lagos State, Nigeria.</p>
                     </div>
                 </div>
                 <div class="info-item">
                     <i class="fas fa-phone-alt"></i>
                     <div>
-                        <h3>Call Ayo Directly</h3>
-                        <p>+234 800-COLOUR-TRUST</p>
+                        <h3>Call  Directly</h3>
+                        <p>+234-905-691-0840</p>
+                        <p>+234-703-446-7363</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <div>
+                        <h3>WhatsApp</h3>
+                        <p>+234-905-691-0840</p>
+                        <p>+234-703-446-7363</p>
                     </div>
                 </div>
                 <div class="info-item">
                     <i class="fas fa-envelope"></i>
                     <div>
                         <h3>Official Email</h3>
-                        <p>info@colourtrust.com</p>
+                        <p>haywee39@gmail.com</p>
                     </div>
                 </div>
             </div>
@@ -223,14 +130,15 @@
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126829.40428616196!2d3.203362097265625!3d6.6455171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b96df6774f767%3A0x63346d0e909a9096!2sAlagbado!5e0!3m2!1sen!2sng!4v1700000000000!5m2!1sen!2sng" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
 
-    <footer style="background:var(--dark); color:#fff; padding:40px 10%; text-align:center;">
-        <p>&copy; 2026 Colour Trust Paints | Developed by Ayo (Softcity Group)</p>
-    </footer>
+    <!-- ******************************************** -->
+          <div id="footer"></div>
+    <!-- ************************************************************************* -->
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init({ duration: 1000, mirror: true });
     </script>
     <script src="./navfolder/nav.js"></script>
+    <script src="./footnavfolder/foot.js"></script>
 </body>
 </html>
