@@ -43,7 +43,7 @@
             justify-content: center; 
             color: #fff; 
             text-align: center;
-            background: linear-gradient(rgba(0,0,50,0.5), rgba(0,0,50,0.5)), url('./ctpaints/midcush.jpg');
+            background: linear-gradient(rgba(0,0,50,0.6), rgba(0,0,50,0.6)), url('./ctpaints/whytchair.jpg');
             background-size: cover; 
             background-position: center; 
              
@@ -132,9 +132,8 @@
         .services { 
             /* padding: 100px 8%;  */
             padding: 80px 8%;
-            background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), 
-                        url('https://images.unsplash.com/photo-1525909002-1b05e0c869d8?q=80&w=2070');
-                        
+            background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),
+                        url('https://images.unsplash.com/photo-1525909002-1b05e0c869d8?q=80&w=2070');                       
             background-attachment: fixed; 
             background-size: cover;
         }
@@ -144,6 +143,7 @@
             font-family:Montserrat; 
             font-size:2.5rem; 
             margin-bottom: 50px;
+            z-index: 100;
         }
 
         .service-grid{
@@ -219,7 +219,7 @@
             padding: 120px 10%; 
             text-align: center; 
             position: relative;
-            background: linear-gradient(rgba(0,0,50,0.6), rgba(0,0,50,0.6)), 
+            background: linear-gradient(rgba(0,0,80,0.7), rgba(0,0,80,0.7)), 
                         url('https://images.unsplash.com/photo-1560448204-61dc36dc98c8?q=80&w=2070');
             background-size: cover;
             background-position: center;
