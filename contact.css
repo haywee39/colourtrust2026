@@ -45,7 +45,11 @@
         }
         .info-item { display: flex; align-items: flex-start; margin-bottom: 40px; }
         .info-item i { font-size: 1.5rem; color: var(--orangered); margin-right: 20px; margin-top: 5px; }
-        .info-item h3 { font-family: Montserrat; font-size: 1.1rem; margin-bottom: 5px; }
+        .info-item h3 { 
+            /* font-family: Montserrat;  */
+            font-size: 1.1rem; 
+            margin-bottom: 5px; 
+        }
         .info-item p { opacity: 0.7; font-size: 0.9rem; }
 
         .social-circle { display: flex; gap: 15px; margin-top: 30px; }
@@ -58,7 +62,11 @@
 
         /* Right Side: Form */
         .contact-form-box { padding: 60px; }
-        .contact-form-box h2 { font-family: Montserrat; font-size: 2rem; margin-bottom: 10px; }
+        .contact-form-box h2 { 
+            /* font-family: Montserrat;  */
+            font-size: 2rem; 
+            margin-bottom: 10px; 
+        }
         .contact-form-box p { margin-bottom: 40px; opacity: 0.6; }
 
         .input-group { position: relative; margin-bottom: 30px; }

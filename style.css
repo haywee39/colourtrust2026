@@ -49,7 +49,7 @@
              
         }
         .hero h1 { 
-            font-family: 'Montserrat'; 
+            /* font-family: 'Montserrat';  */
             font-size: clamp(2.5rem, 8vw, 5rem);
             margin-bottom: 20px; 
         }
@@ -68,7 +68,7 @@
             align-items: center; 
         }
         .story-text h2 { 
-            font-family: Montserrat; 
+            /* font-family: Montserrat;  */
             font-size: 2.5rem; 
             margin-bottom: 20px; 
             color: var(--navy); 
@@ -140,7 +140,7 @@
 
         .services h2{
             text-align:center; 
-            font-family:Montserrat; 
+            /* font-family:Montserrat;  */
             font-size:2.5rem; 
             margin-bottom: 50px;
             z-index: 100;
@@ -210,7 +210,7 @@
         .counter { 
             font-size: 3.5rem; 
             color: var(--orangered); 
-            font-family: Montserrat; 
+            /* font-family: Montserrat;  */
             display: block; 
         }
 /* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
@@ -234,7 +234,7 @@
         }
 
         .cta h2 { 
-            font-family: 'Montserrat'; 
+            /* font-family: 'Montserrat';  */
             font-size: clamp(2rem, 5vw, 3rem); 
             margin-bottom: 20px; 
             text-transform: uppercase;

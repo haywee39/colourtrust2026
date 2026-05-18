@@ -34,14 +34,14 @@
         }
 
         .about-hero h1 { 
-            font-family: 'Montserrat'; 
+            /* font-family: 'Montserrat';  */
             font-size: 3.3rem; 
             text-transform: uppercase; 
         }
 
         /* --- THE FOUNDER'S VISION SECTION --- */
         .founder-section { padding: 100px 10%; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
-        .founder-text h2 { font-family: Montserrat; font-size: 2.5rem; margin-bottom: 30px; position: relative; }
+        .founder-text h2 { font-size: 2.5rem; margin-bottom: 50px; position: relative; font-weight: 700; }
         .founder-text h2::after { content: ''; position: absolute; left: 0; bottom: -10px; width: 60px; height: 4px; background: var(--orangered); }
         .founder-text p { line-height: 1.9; margin-bottom: 20px; opacity: 0.8; }
 
@@ -58,6 +58,14 @@
 
         /* --- JOURNEY TIMELINE --- */
         .timeline-section { padding: 100px 8%; background: var(--navy); color: #fff; text-align: center; }
+        .timeline-section h2{
+            /* color: var(--navy); */
+            /* font-family: 'Montserrat', sans-serif; */
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            font-weight: 700;
+        }
         .timeline-container { margin-top: 60px; position: relative; max-width: 1000px; margin-left: auto; margin-right: auto; }
         
         .timeline-item { 
@@ -94,7 +102,7 @@
         }
 
         .cta h2 { 
-            font-family: 'Montserrat'; 
+            /* font-family: 'Montserrat';  */
             font-size: clamp(2rem, 5vw, 3rem); 
             margin-bottom: 20px; 
             text-transform: uppercase;
