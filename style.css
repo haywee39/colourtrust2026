@@ -332,11 +332,11 @@
                  /* ********************************* */
                 #product-quality{
                 flex-direction: column;
-                padding: 3rem;
+                /* padding: 3rem; */
                 }
                 .listPic{
-                padding: 15px;
-                width: 90%;
+                padding: 0;
+                width: 100%;
                 }
                 .listPic img{
                 width: 100%;
