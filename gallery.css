@@ -97,7 +97,7 @@
 
 
          /* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
-            #product-quality{
+              #product-quality{
             display: flex;
             justify-content: center;
             align-items: center;
@@ -109,7 +109,7 @@
             }
             .listPic{
             padding: 20px;
-            width: 40%;
+            width: 60%;
             height: auto;
             }
             .listPic img{
@@ -221,9 +221,9 @@
               font-size: 2.8rem; 
               margin-bottom: 10px;
             }
-             #product-quality{
+              #product-quality{
                 flex-direction: column;
-                /* padding: 3rem; */
+                gap: 40px;
                 }
                 .listPic{
                 padding: 0;
@@ -239,7 +239,11 @@
                 padding: 10px;
                 width: 100%;
                 }
+                .list h1{
+                    font-size: 30px;
+                }
                 .list p{
                 margin-top: 15px;
+                line-height: 1.2rem;
                 }
           }
