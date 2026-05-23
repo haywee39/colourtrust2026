@@ -34,16 +34,38 @@
         }
 
         .about-hero h1 { 
-            /* font-family: 'Montserrat';  */
             font-size: 3.3rem; 
             text-transform: uppercase; 
         }
 
         /* --- THE FOUNDER'S VISION SECTION --- */
-        .founder-section { padding: 100px 10%; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
-        .founder-text h2 { font-size: 2.5rem; margin-bottom: 50px; position: relative; font-weight: 700; }
-        .founder-text h2::after { content: ''; position: absolute; left: 0; bottom: -10px; width: 60px; height: 4px; background: var(--orangered); }
-        .founder-text p { line-height: 1.9; margin-bottom: 20px; opacity: 0.8; }
+        .founder-section { 
+            padding: 100px 10%; 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 80px; 
+            align-items: center; 
+        }
+        .founder-text h2 { 
+            font-size: 2.5rem; 
+            margin-bottom: 50px; 
+            position: relative; 
+            font-weight: 700; 
+        }
+        .founder-text h2::after { 
+            content: ''; 
+            position: absolute; 
+            left: 0; 
+            bottom: -10px; 
+            width: 60px; 
+            height: 4px; 
+            background: var(--orangered); 
+        }
+        .founder-text p { 
+            line-height: 1.9; 
+            margin-bottom: 20px; 
+            opacity: 0.8; 
+        }
 
         .founder-image { position: relative; }
         .founder-image img { width: 100%; border-radius: 20px; box-shadow: 0 30px 60px rgba(0,0,0,0.1); }
@@ -59,8 +81,6 @@
         /* --- JOURNEY TIMELINE --- */
         .timeline-section { padding: 100px 8%; background: var(--navy); color: #fff; text-align: center; }
         .timeline-section h2{
-            /* color: var(--navy); */
-            /* font-family: 'Montserrat', sans-serif; */
             text-align: center;
             font-size: 2.5rem;
             margin-bottom: 50px;
@@ -123,11 +143,10 @@
             color: #fff; 
             padding: 20px 50px; 
             text-decoration: none; 
-            font-weight: 800; 
+            font-weight: lighter; 
             border-radius: 5px; 
             display: inline-block; 
             transition: all 0.4s ease;
-            text-transform: uppercase;
             letter-spacing: 2px;
             border: 2px solid var(--orangered);
         }
